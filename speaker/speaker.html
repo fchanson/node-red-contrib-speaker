@@ -1,0 +1,81 @@
+
+
+<script type="text/x-red" data-template-name="speaker out">
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+    	<label for="node-input-channels">Channels</label>
+	    <select type="text" id="node-input-channels">
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	      <option value="6">6</option>
+	      <option value="7">7</option>
+	      <option value="8">8</option>
+	    </select>
+  	</div>
+    <div class="form-row">
+    	<label for="node-input-bitDepth">Bits per sample</label>
+	    <select type="text" id="node-input-bitDepth">
+	      <option value="8">8</option>
+	      <option value="16">16</option>
+	      <option value="24">24</option>
+	    </select>
+  	</div>
+  	<div class="form-row">
+    	<label for="node-input-sampleRate">Sample rate</label>
+	    <select type="text" id="node-input-sampleRate">
+	      <option value="11025">11,025 Hz</option>
+	      <option value="22050">22,050 Hz</option>
+	      <option value="44100">44,100 Hz</option>
+	      <option value="48000">48,000 Hz</option>
+	      <option value="96000">96,000 Hz</option>
+	      <option value="192000">192,000 Hz</option>
+	    </select>
+  	</div>
+  	
+</script>
+
+<script type="text/x-red" data-help-name="speaker out">
+    <p>This node accepts PCM audio data and plays it to the speakers.</p>
+    <p>The input should be a raw buffer containing the audio on <b>msg.speech</b>.</p>
+    <p>It can be used with the IBM Watson Text to Speech service on Bluemix.</p>
+    <p>You can define :</p>
+    <ul>
+        <li>the number of audio channels (default: 1).</li>
+        <li>the sampling resolution (default: 16-bit).</li>
+        <li>the sampling rate (default: 22,050 Hz).</li>
+    </ul>
+    <p>These default values are used by the IBM Watson Text to Speech service on Bluemix.</p>
+    <p>The audio parameters can be overwritten by <b>msg.channels</b>, <b>msg.bitDepth</b> and <b>msg.sampleRate</b></p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('speaker out',{
+        category: 'output',
+        color:"#3fadb5",
+        defaults: {
+            name: {value:"Speaker Out"},
+            channels: {value:"1"},
+            bitDepth: {value:"16"},
+            sampleRate: {value:"22050"}
+        },
+        inputs:1,
+        outputs:0,
+        icon: "bridge.png",
+        align: "right",
+        label: function() {
+            return this.name;
+        },
+        labelStyle: function() {
+            return (this.name)?"node_label_italic":"";
+        }
+
+    });
+</script>
+
