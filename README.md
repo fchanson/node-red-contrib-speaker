@@ -6,7 +6,7 @@ It uses the [node-speaker node](https://github.com/TooTallNate/node-speaker)
 
 ### Install
 
-From your node-red directory:
+From your .node-red directory:
 
     npm install --unsafe-perm node-red-contrib-speaker
     
