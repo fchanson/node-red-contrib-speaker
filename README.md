@@ -23,7 +23,7 @@ It can be used with the IBM Watson Text to Speech service on Bluemix.
 
 You can define :
 
-- the number of audio channels (default: 1).
+- the number of audio channels (default: 2).
 - the sampling resolution (default: 16-bit).
 - the sampling rate (default: 11,025 Hz).
 
