@@ -47,9 +47,9 @@
     <p>It can be used with the IBM Watson Text to Speech service on Bluemix.</p>
     <p>You can define :</p>
     <ul>
-        <li>the number of audio channels (default: 1).</li>
+        <li>the number of audio channels (default: 2).</li>
         <li>the sampling resolution (default: 16-bit).</li>
-        <li>the sampling rate (default: 22,050 Hz).</li>
+        <li>the sampling rate (default: 11,025 Hz).</li>
     </ul>
     <p>These default values are used by the IBM Watson Text to Speech service on Bluemix.</p>
     <p>The audio parameters can be overwritten by <b>msg.channels</b>, <b>msg.bitDepth</b> and <b>msg.sampleRate</b></p>
@@ -61,9 +61,9 @@
         color:"#3fadb5",
         defaults: {
             name: {value:"Speaker Out"},
-            channels: {value:"1"},
+            channels: {value:"2"},
             bitDepth: {value:"16"},
-            sampleRate: {value:"22050"}
+            sampleRate: {value:"11025"}
         },
         inputs:1,
         outputs:0,
