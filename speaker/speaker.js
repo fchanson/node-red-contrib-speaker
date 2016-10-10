@@ -15,7 +15,7 @@ module.exports = function(RED) {
 
         
         node.on("input", function(msg) {
-            if (msg.speech && Buffer.byteLength(msg.speech)>0) {
+            if (msg.speech && Buffer.isBuffer(msg.speech)) {
             	var params = (msg.channels || this.channels)+'_'+(msg.bitDepth || this.bitDepth)+'_'+(msg.sampleRate || this.sampleRate);
             	speaker = speakerList[params];
             	if(!speaker) {
