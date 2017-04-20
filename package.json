@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-speaker",
-  "version": "0.1.1",
+  "version": "0.1.6",
   "description": "This node accepts PCM audio data and plays it to the speakers",
   "dependencies": {
 	  "speaker":"^0.2.6"
