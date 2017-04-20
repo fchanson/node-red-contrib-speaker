@@ -20,7 +20,13 @@
           "speaker": "speaker/speaker.js"
       }
   },
-  "author": "",
-  "license": "",
+  "author": {
+	    "name": "Frederic Chanson"
+	},
+  "license": "MIT",
+  "bugs": {
+	    "url": "https://github.com/fchanson/node-red-contrib-arp/issues"
+  },
+  "homepage": "https://github.com/fchanson/node-red-contrib-arp",
   "readmeFilename": "README.md"
 }
