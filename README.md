@@ -30,3 +30,7 @@ You can define :
 These default values are used by the IBM Watson Text to Speech service on Bluemix.
 
 The audio parameters can be overwritten by **msg.channels**, **msg.bitDepth** and **msg.sampleRate**
+
+### License 
+
+MIT License
